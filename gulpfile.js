@@ -5,7 +5,7 @@ var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 
-gulp.task('watch', function() {
+gulp.task('watch', ['sass'], function() {
   gulp.watch('app/scss/**/*.+(sass|scss)', ['sass']);
 });
 
