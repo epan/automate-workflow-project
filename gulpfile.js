@@ -11,15 +11,19 @@ gulp.task('watch', function() {
 
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.+(sass|scss)')
-    .pipe(customPlumber())
+    .pipe(customPlumber('Error Running Sass'))
     .pipe(sass({
       precision: 4 // Sets number of decimal points to 2
     })) // Compiles Sass into CSS with gulp-sass
     .pipe(gulp.dest('app/css'))
 });
 
-function customPlumber() {
+function customPlumber(errTitle) {
   return plumber({
-    errorHandler: notify.onError("Error: <%= error.message %>")
+    errorHandler: notify.onError({
+        // customize error title
+        title: errTitle || "Error running Gulp",
+        message: "Error: <%= error.message %>",
+    })
   });
 }
