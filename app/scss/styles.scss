@@ -1,3 +1,7 @@
+@function em($target, $context) {
+  @return $target / $context * 1em;
+}
+
 html {
   font-size: 16px;
   font-family: 'Source Serif Pro', serif;
@@ -16,6 +20,23 @@ html {
   }
 }
 
-h1 { font-size: 3.157em; }
-h2 { font-size: 2.369em; }
-h3 { font-size: 1.777em; }
+body {
+  width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 3.157em;
+  margin-bottom: em(1.5, 3.157); // results in 0.44346em or 1 baseline
+}
+
+h2 {
+  font-size: 2.369em;
+  margin-bottom: em(1.5, 2.369);
+}
+
+h3 {
+  font-size: 1.777em;
+  margin-bottom: em(1.5, 1.777);
+}

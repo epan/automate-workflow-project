@@ -12,11 +12,19 @@ html {
     html {
       font-size: 24px; } }
 
+body {
+  width: 30em;
+  margin-left: auto;
+  margin-right: auto; }
+
 h1 {
-  font-size: 3.157em; }
+  font-size: 3.157em;
+  margin-bottom: 0.47513em; }
 
 h2 {
-  font-size: 2.369em; }
+  font-size: 2.369em;
+  margin-bottom: 0.63318em; }
 
 h3 {
-  font-size: 1.777em; }
+  font-size: 1.777em;
+  margin-bottom: 0.84412em; }
