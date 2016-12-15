@@ -16,18 +16,6 @@ html {
   }
 }
 
-h1 {
-  font-size: 50.517px;
-
-  @media (min-width: 600px) {
-    font-size: 56.832px;
-  }
-
-  @media (min-width: 800px) {
-    font-size: 69.461px;
-  }
-
-  @media (min-width: 1200px) {
-    font-size: 75.776px;
-  }
-}
+h1 { font-size: 3.157em; }
+h2 { font-size: 2.369em; }
+h3 { font-size: 1.777em; }
